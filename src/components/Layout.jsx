@@ -4,17 +4,26 @@ import { Container } from "@mui/material";
 
 export default function Layout({ children }) {
   return (
-    <>
-   <Header />
-<Container
-  sx={{
-    mt: 4,
-    display: "flex",
-    justifyContent: "center", // centers horizontally
-  }}
->
-  {children}
-</Container>
-    </>
+    <Container
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        minHeight: "100vh",
+        width: "2000px",
+      }}
+    >
+      <Header />
+      <Container
+        sx={{
+          mt: 4,
+          display: "flex",
+          width: "2000px",
+          justifyContent: "center", // centers horizontally
+        }}
+      >
+        {children}
+      </Container>
+    </Container>
   );
 }
